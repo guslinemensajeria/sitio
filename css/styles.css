@@ -1,5 +1,5 @@
-/* Importación de Google Fonts (fuente elegante para el logo y limpia para el texto) */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600&display=swap');
+/* Importación de Google Fonts (fuente limpia y moderna sans-serif) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 /* Reset básico de estilos */
 * {
@@ -9,19 +9,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Fondo oscuro simulando el contenedor superior de la imagen */
 body {
-    background-color: #222831;
+    background-color: #ffffff;
+    min-height: 100vh;
 }
 
-/* Contenedor principal del encabezado */
+/* ==========================================
+   ESTILOS DEL MENÚ DE NAVEGACIÓN (PRESERVADO)
+   ========================================== */
 .header {
     width: 100%;
-    padding: 20px 40px;
-    background-color: transparent; /* Se puede cambiar si prefieres un fondo sólido */
+    padding: 25px 40px;
+    background-color: #ffffff;
 }
 
-/* Estructura Flexbox para alinear los tres bloques principales */
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
@@ -30,11 +31,11 @@ body {
     align-items: center;
 }
 
-/* Estilos del Logo "Feane" */
+/* Estilos del Logo */
 .logo a {
-    font-family: 'Dancing Script', cursive;
-    font-size: 32px;
-    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -46,49 +47,168 @@ body {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
-/* Enlace activo (HOME en color amarillo/naranja) */
 .nav-links a.active, 
 .nav-links a:hover {
-    color: #ffbe33;
+    color: #2b82fb; /* Tono azul adaptable */
 }
 
-/* Iconos de acción y botón lateral derecho */
-.nav-actions {
+/* Botón "BOOK TRIP" del Navbar */
+.btn-book {
+    background-color: #2b82fb;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: inline-block;
+}
+
+.btn-book:hover {
+    background-color: #1a6fd9;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   NUEVOS ESTILOS PARA LA SECCIÓN HERO 
+   ========================================== */
+
+/* Contenedor exterior del Hero */
+.hero-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+}
+
+/* Tarjeta principal con fondo de cielo y bordes redondeados */
+.hero-card {
+    width: 100%;
+    min-height: 550px;
+    background-image: url('https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?q=80&w=1924&auto=format&fit=crop'); /* Imagen de cielo de cortesía */
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bloque de Contenido (Izquierda) */
+.hero-content {
+    max-width: 55%;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1c2321;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #000000;
+    line-height: 1.15;
+    margin-bottom: 35px;
+}
+
+/* Botones del Hero */
+.hero-buttons {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.action-icon {
+.btn-primary {
+    background-color: #2b82fb;
     color: #ffffff;
-    font-size: 16px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.action-icon:hover {
-    color: #ffbe33;
-}
-
-/* Botón "Order Online" */
-.btn-order {
-    background-color: #ffbe33;
-    color: #ffffff;
-    padding: 10px 25px;
+    padding: 16px 35px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(43, 130, 251, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.btn-order:hover {
-    background-color: #e69c00;
+.btn-primary:hover {
+    background-color: #1a6fd9;
+    transform: translateY(-2px);
+}
+
+/* Botón de reproducción circular */
+.btn-play {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #2b82fb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-play:hover {
+    transform: scale(1.1);
+    background-color: #f0f5ff;
+}
+
+/* Bloque de Imagen (Derecha) */
+.hero-image-wrapper {
+    max-width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.bus-image {
+    width: 115%; /* Se expande ligeramente para lograr el efecto de profundidad */
+    height: auto;
+    object-fit: contain;
+    transform: translate(20px, 40px); /* Ajuste para emular la posición de la carretera */
+}
+
+/* Responsividad básica para pantallas pequeñas */
+@media (max-width: 992px) {
+    .hero-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image-wrapper {
+        max-width: 100%;
+        justify-content: center;
+    }
+    .bus-image {
+        width: 90%;
+        transform: none;
+    }
 }
