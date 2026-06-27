@@ -1,0 +1,94 @@
+/* Importación de Google Fonts (fuente elegante para el logo y limpia para el texto) */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fondo oscuro simulando el contenedor superior de la imagen */
+body {
+    background-color: #222831;
+}
+
+/* Contenedor principal del encabezado */
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: transparent; /* Se puede cambiar si prefieres un fondo sólido */
+}
+
+/* Estructura Flexbox para alinear los tres bloques principales */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos del Logo "Feane" */
+.logo a {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Enlaces del centro */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Enlace activo (HOME en color amarillo/naranja) */
+.nav-links a.active, 
+.nav-links a:hover {
+    color: #ffbe33;
+}
+
+/* Iconos de acción y botón lateral derecho */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-icon {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.action-icon:hover {
+    color: #ffbe33;
+}
+
+/* Botón "Order Online" */
+.btn-order {
+    background-color: #ffbe33;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #e69c00;
+}
